@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<environment include="Development">
+    <script src="~/lib/twbs-pagination/jquery.twbsPagination.js"></script>
+    <script src="~/js/livroLista.js"></script>
+</environment>
+<environment exclude="Development">
+    <script src="~/lib/twbs-pagination/jquery.twbsPagination.min.js"></script>
+    <script src="~/js/livroLista.min.js" sp-append-version="true"></script>
+</environment>
+
+<script>
+    atualizarMenu("menu-exemplares");
+</script>
+
+<h2>Lista de livros</h2>
+
+<hr>
+
+<main>
+    <div class="input-group mb-3">
+
+        <input type="text" class="form-control" placeholder="Título do livro" aria-label="Título do livro" aria-describedby="btn-pesquisar-livro" id="input-pesquisa-livro">
+        <div class="input-group-append">
+
+            <button class="btn btn-outline-secondary" type="button" id="btn-pesquisar-livro">
+
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                Pesquisar
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="album py-5 bg-light">
+
+        <div class="container">
+
+            <div class="row" id="div-lista-livros">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <ul class="list-unstyled" id="ul-livros"></ul>
+
+    <div class="btn-toolbar justify-content-between">
+
+        <ul class="btn-group mr-2" id="ul-paginacao-livros"></ul>
+
+        <select class="input-group custom-select " id="select-livros-por-pagina">
+
+            <option value="3">3 livros por página</option>
+            <option value="6">6 livros por página</option>
+            <option value="9">9 livros por página</option>
+            <option value="12">12 livros por página</option>
+
+        </select>
+
+    </div>
+
+</main>

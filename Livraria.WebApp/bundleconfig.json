@@ -1,0 +1,24 @@
+[
+  {
+    "outputFileName": "wwwroot/site.min.css",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/css/bootstrap.min.css",
+      "node_modules/pnotify/dist/PNotifyBrightTheme.css"
+    ],
+    "minify": { "enabled": false }
+  },
+  {
+    "outputFileName": "wwwroot/site.min.js",
+    "inputFiles": [
+      "node_modules/jquery/dist/jquery.min.js",
+      "node_modules/popper.js/dist/umd/popper.min.js",
+      "node_modules/bootstrap/dist/js/bootstrap.min.js",
+      "node_modules/pnotify/dist/iife/Pnotify.js",
+      "node_modules/pnotify/dist/iife/PnotifyButtons.js",
+      "node_modules/pnotify/dist/iife/PnotifyAnimate.js",
+      "node_modules/pnotify/dist/iife/PnotifyMobile.js",
+      "wwwroot/lib/signalr/dist/browser/signalr.min.js"
+    ],
+    "minify": { "enabled": false }
+  }
+]
